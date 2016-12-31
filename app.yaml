@@ -1,0 +1,63 @@
+threadsafe: true
+runtime: python27
+default_expiration: "5m"
+api_version: 1
+
+handlers:
+
+- url: /
+  static_files: static/manvantara.html
+  upload: static/
+ 
+- url: /gallery
+  static_files: static/gallery.html
+  upload: static/
+  
+- url: /contactus
+  static_files: static/contactus.html
+  upload: static/
+ 
+- url: /aboutus
+  static_files: static/aboutus.html
+  upload: static/
+  
+- url: /feedback
+  static_files: static/feedback.html
+  upload: static/
+ 
+- url: /profile
+  static_files: static/userprofile.html
+  upload: static/
+
+# - url: /static/jsons
+ # static_dir: static/jsons
+# 
+# - url: /static/templates
+ # static_dir: static/templates
+# 
+# - url: /dist/css
+ # static_dir: dist/css
+# 
+# - url: /dist/js
+ # static_dir: dist/js
+# 
+# - url: /dist/fonts
+ # static_dir: dist/fonts  
+# 
+# - url: /static
+ # static_dir: static
+
+- url: /static
+  static_dir: static
+
+
+# - url: /static/js/libraries
+ # static_dir: static/js/libraries
+
+- url: /robots.txt
+  static_files: siteconfig/robots.txt
+  upload: siteconfig/robots.txt
+
+
+- url: /.*
+  script: start.application

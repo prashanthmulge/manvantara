@@ -1,0 +1,22 @@
+application: manvantara
+version: 1
+threadsafe: true
+runtime: python27
+default_expiration: "5m"
+api_version: 1
+
+handlers:
+
+- url: /
+  static_files: static/manvantara.html
+  upload: static/
+ 
+- url: /gallery
+  static_files: static/gallery.html
+  upload: static/
+ 
+- url: /static
+  static_dir: static
+ 
+- url: /.*
+  script: start.application
